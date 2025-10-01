@@ -1,0 +1,9 @@
+import cv2
+image = cv2.imread('images/email.jpg')
+image = cv2.resize(image, (450, 300))
+image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv2.Canny(image, 80, 80)
+cv2.imshow('me', image)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
