@@ -1,0 +1,9 @@
+import cv2
+img = cv2.imread('me.jpg')
+img = cv2.resize(img, (300, 400))
+cv2.rectangle(img,(100, 20), (200,150),(204, 139, 142), 2)
+cv2.putText(img, "Miroslava Holomoza", (70, 180), cv2.FONT_HERSHEY_DUPLEX, 0.5,(255, 255, 255))
+cv2.imshow('my photo', img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
