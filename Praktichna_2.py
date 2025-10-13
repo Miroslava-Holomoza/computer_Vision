@@ -57,11 +57,11 @@ for cnt in contours:
         mean_val = cv2.mean(hsv, mask=mask_object)[:3]
         h_val = mean_val[0]
 
-        if (0 <= h_val <= 10) or (170 <= h_val <= 179):
+        if (0 <= h_val <= 10) or (160 <= h_val <= 179):
             color = "red"
-        elif 40 <= h_val <= 85:
+        elif 36 <= h_val <= 85:
             color = "green"
-        elif 90 <= h_val <= 130:
+        elif 101 <= h_val <= 130:
             color = "blue"
         else:
             color = "unknown"
@@ -84,4 +84,5 @@ cv2.imshow("All Objects", img)
 cv2.imwrite("result.jpg", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 
