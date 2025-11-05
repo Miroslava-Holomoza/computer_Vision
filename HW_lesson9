@@ -1,0 +1,59 @@
+import cv2
+import numpy as np
+import os
+from collections import Counter
+
+
+class_frequencies = Counter()
+
+net = cv2.dnn.readNetFromCaffe(
+    "Data/mobilenet_deploy.prototxt",
+    "Data/mobilenet.caffemodel"
+)
+
+image_folder = "images/MobileNet"
+
+with open("Data/synset.txt", "r") as f:
+    class_names = [line.strip() for line in f]
+
+
+image_files = [f for f in os.listdir(image_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+
+for image_file in image_files:
+
+    image_path = os.path.join(image_folder, image_file)
+    image = cv2.imread(image_path)
+    
+    if image is None:
+        print(f"Could not read image: {image_file}")
+        continue
+        
+    blob = cv2.dnn.blobFromImage(image, 1.0/255, (224, 224), (0, 0, 0), swapRB=True)
+    
+    net.setInput(blob)
+    
+
+    preds = net.forward()
+    
+    prob_vector = preds.reshape(-1)
+    
+
+    top_indices = np.argsort(prob_vector)[-5:][::-1]
+    
+    print(f"\nPredictions for {image_file}:")
+    print("Probability vector shape:", prob_vector.shape)
+    print("\nTop 5 predictions:")
+    for i in top_indices:
+        print(f"{class_names[i]}: {prob_vector[i]*100:.2f}%")
+    
+    top_class = class_names[top_indices[0]]
+    class_frequencies[top_class] += 1
+    
+    print("-" * 50)
+
+print("\nFrequency table of top predictions:")
+print("-" * 50)
+print("Class Name".ljust(50) + "| Frequency")
+print("-" * 50)
+for class_name, freq in class_frequencies.items():
+    print(f"{class_name.ljust(50)}| {freq}")
