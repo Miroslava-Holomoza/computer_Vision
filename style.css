@@ -1,0 +1,21 @@
+body {
+    background-color: #b3ecdd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+h1 {
+    color: mediumvioletred;
+    text-align: center;
+}
+p {
+    letter-spacing: normal;
+}
+ul {
+    background-color: #20755c;
+    width: 300px;
+}
+a {
+    text-decoration: #2e90ef;
+}
