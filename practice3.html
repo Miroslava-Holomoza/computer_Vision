@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Табличка</title>
+    <style>
+        .wrap{
+            width: 720px;
+            margin: 24px auto;
+            border: 6px dashed #000;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        table.grid{
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid td{
+            border: 3px solid #000;
+            height: 90px;
+            text-align: center;
+            vertical-align: middle;
+            background: #fdfd00;
+        }
+
+        .grid td.green{ background: #a8cf8d; }
+        .grid td.peach{ background: #f2af83; }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <table class="grid" aria-label="Сітка 1-40">
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                2
+            </td>
+            <td>
+                3
+            </td>
+            <td>
+                4
+            </td>
+            <td>
+                5
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6
+            </td>
+            <td>
+                7
+            </td>
+            <td>
+                8
+            </td>
+            <td>
+                9
+            </td>
+            <td>
+                10
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                11
+            </td>
+            <td class="green" rowspan="3">12
+            </td>
+            <td>
+                13
+            </td>
+            <td>
+                14
+            </td>
+            <td>
+                15
+            </td>
+        </tr>
+        <tr>
+            <td>
+                16
+            </td>
+            <td>
+                17
+            </td>
+            <td>
+                18
+            </td>
+            <td>
+                19
+            </td>
+        </tr>
+        <tr>
+            <td>
+                20
+            </td>
+            <td>
+                21
+            </td>
+            <td>
+                22
+            </td>
+            <td>
+                23
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                24
+            </td>
+            <td>
+                25
+            </td>
+            <td>
+                26
+            </td>
+            <td>
+                27
+            </td>
+            <td>
+                28
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                29
+            </td>
+            <td>
+                30
+            </td>
+            <td class="peach" colspan="2" rowspan="2">31</td>
+            <td>
+                32
+            </td>
+        </tr>
+        <tr>
+            <td>
+                33
+            </td>
+            <td>
+                34
+            </td>
+            <td>
+                35
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                36
+            </td>
+            <td>
+                37
+            </td>
+            <td>
+                38
+            </td>
+            <td>
+                39
+            </td>
+            <td>
+                40
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
