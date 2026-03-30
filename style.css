@@ -1,21 +1,32 @@
-body {
-    background-color: #b3ecdd;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.6;
-    font-size: 18px;
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style: none;
 }
-
-h1 {
-    color: mediumvioletred;
-    text-align: center;
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
 }
-p {
-    letter-spacing: normal;
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
 }
-ul {
-    background-color: #20755c;
-    width: 300px;
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
-a {
-    text-decoration: #2e90ef;
+.logo-img{
+    background: linear-gradient(rgb(173, 84, 220), rgb(224, 67, 170));
+    padding:35px;
+    border-radius:50%;
+}
+.logo-text{
+    display: flex;
+    font-size:20px;
+    font-weight:500;
 }
