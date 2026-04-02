@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.logo-icon{
+    font-size: 20px;
+    background: linear-gradient(#BC4AF1, #E93EAE);
+    padding: 10px;
+    border-radius: 50%;
+}
+header a{
+    color: #0f0f0f;
+}
+.logo-tittle{
+    font-weight: 500;
+}
+nav ul{
+    display: flex;
+    column-gap: 30px;
+}
+nav ul li a:hover{
+    color: #b633db;
+    font-weight: 500;
+}
+.header-top-button{
+    display: flex;
+    column-gap: 15px;
+}
+.header-top-button button{
+    border: none;
+    padding: 10px;
+    background: none;
+    border-radius: 20%;
+}
+.header-top-button button:hover{
+    background: #eaeaea;
+}
+.header-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 130px 0;
+    color: #ffffff;
+    background: linear-gradient(165deg, #9912FA, #F63499, #FF8815);
+    row-gap: 20px;
+}
+.header-bottom h1{
+    font-size: 60px;
+    font-weight: 550;
+    width: 770px;
+    line-height: 60px;
+    text-align: center;
+}
+.header-bottom p{
+    font-size: 20px;
+    width: 770px;
+    text-align: center;
+    font-weight: 400;
+}
+.header-bottom-btn button{
+    border: none;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: rgb(186, 74, 244);
+    font-weight: 500;
+}
+#btn-hover:hover{
+    background: transparent;
+    border: 1px solid white;
+    color: #0f0f0f;
+}
+.advantages{
+    display: flex;
+    justify-content: center;
+    padding: 65px 0;
+}
+.advantages article svg{
+    background: #f4e8ff;
+    padding: 30px;
+    border-radius: 50%;
+    color: #9810FA;
+}
